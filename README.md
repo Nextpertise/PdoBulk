@@ -32,13 +32,7 @@ $dbpass		= "password";
 
 // database connection
 $conn = new \PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
-<<<<<<< HEAD
-$pdoBulk = new PdoBulk($conn);		
-=======
-
-// pass pdo $conn to pdoBulk
-$pdoBulk = new pdoBulk($conn);		
->>>>>>> 9733b6c289f6917d35f8d6325eb03fd8e9ad827c
+$pdoBulk = new PdoBulk($conn);
 ```
 
 **Add a two entries**
