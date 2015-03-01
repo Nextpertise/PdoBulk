@@ -1,6 +1,6 @@
 <?php
 
-namespace PdoBulk
+namespace PdoBulk;
 
 class PdoBulk {
 	
