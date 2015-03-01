@@ -2,7 +2,9 @@
 
 namespace PdoBulk;
 
-class PdoBulk {
+require 'PdoBulkSubquery.php';
+
+class pdoBulk {
 	
 	private $pdo = null;
 	private $queue = null;
