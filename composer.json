@@ -1,0 +1,23 @@
+{
+    "name": "nextpertise/PdoBulk",
+    "description": "A PHP Pdo insert wrapper which allows you to bulk insert records wich contain subqueries.",
+    "license": "GPL",
+    "homepage": "https://github.com/nextpertise/pdobulk",
+    "authors": [
+        {
+            "name": "Teun Ouwehand",
+            "email": "teun@nextpertise.nl"
+        }
+    ],
+    "keywords": [
+        "pdo",
+        "bulk",
+        "mysql",
+        "multi"
+    ],
+    "autoload": {
+        "psr-0": {
+            "PdoBulk": "src"
+        }
+    }
+}
