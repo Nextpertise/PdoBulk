@@ -1,5 +1,5 @@
 {
-    "name": "nextpertise/PdoBulk",
+    "name": "nextpertise/pdo-bulk",
     "description": "A PHP Pdo insert wrapper which allows you to bulk insert records wich contain subqueries.",
     "license": "GPL",
     "homepage": "https://github.com/nextpertise/pdobulk",
