@@ -29,7 +29,9 @@ class PdoBulk {
 	
 	// Bulk insert logic
 	public function flushQueue($table, $onduplicate = null) {
-		if (gettype($table) != 'string') throw new Exception('First parameter should be string, ' . gettype($table) . ' given.');
+		if (gettype($table) != 'string') {
+			throw new Exception('First parameter should be string, ' . gettype($table) . ' given.');
+		}
 		if (isset($this->queue[$table]) && $this->queue[$table]) {
 			// Define query
 			$query = "INSERT INTO `" . $table . "` (`" . implode("`,`", array_keys($this->queue[$table][0])) . "`) VALUES ";
@@ -80,7 +82,9 @@ class PdoBulk {
 	
 	private function isAssoc($arr)
 	{
-		if (gettype($arr) != 'array') throw new Exception('First parameter should be array, ' . gettype($arr) . ' given.');
+		if (gettype($arr) != 'array') {
+			throw new Exception('First parameter should be array, ' . gettype($arr) . ' given.');
+		}
 	    return array_keys($arr) !== range(0, count($arr) - 1);
 	}
 	
@@ -112,7 +116,9 @@ class PdoBulk {
 	}
 	
 	public function persist($table, $entry) {
-		if (gettype($table) != 'string') throw new Exception('First parameter should be string, ' . gettype($table) . ' given.');
+		if (gettype($table) != 'string') {
+			throw new Exception('First parameter should be string, ' . gettype($table) . ' given.');
+		}
 		if ($ret = $this->isAssoc($entry)) {
 			$this->queue[$table][] = $entry;
 			if ($this->getQueueLength($table) > $this->getAutoflush() && $this->getAutoflush() != 0) {
@@ -127,7 +133,9 @@ class PdoBulk {
 	}
 
 	public function setAutoflush($autoflush) {
-		if (gettype($autoflush) != 'integer') throw new Exception('First parameter should be integer, ' . gettype($autoflush) . ' given.');
+		if (gettype($autoflush) != 'integer') {
+			throw new Exception('First parameter should be integer, ' . gettype($autoflush) . ' given.');
+		}
 		$this->autoflush = $autoflush;
 	}
 }
