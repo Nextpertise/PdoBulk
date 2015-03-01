@@ -1,6 +1,6 @@
 PdoBulk - A PHP Pdo insert wrapper
 ==============================================
-[![Build Status](https://secure.travis-ci.org/nextpertise/pdobulk.png)](http://travis-ci.org/nextpertise/pdobulk)
+[![Build Status](https://travis-ci.org/Nextpertise/PdoBulk.svg?branch=master)](https://travis-ci.org/Nextpertise/PdoBulk)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Nextpertise/PdoBulk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Nextpertise/PdoBulk/?branch=master)
 
 Simple PHP helper class for working with bulk sets of data which needs to be imported in the database.
