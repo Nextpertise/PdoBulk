@@ -32,7 +32,6 @@ class PdoBulk {
 		if(gettype($table) != 'string') throw new Exception('First parameter should be string, ' . gettype($table) . ' given.');
 		if(isset($this->queue[$table]) && $this->queue[$table]) {
 			// Define query
-			$first = true;
 			$query = "INSERT INTO `".$table."` (`" . implode("`,`", array_keys($this->queue[$table][0])) . "`) VALUES ";
 			
 			// Count number of parameters in element
