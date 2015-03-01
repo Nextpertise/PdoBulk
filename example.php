@@ -1,6 +1,6 @@
 <?php
 
-// namespace exampleApp;
+namespace exampleApp;
 
 require 'src/PdoBulk/PdoBulk.php';
 
@@ -45,5 +45,3 @@ for($i = 0; $i < 1000; $i++) {
 $pdoBulk->flushQueue('Package');
 $pdoBulk->flushQueue('Packageversion');
 echo $i . ';' . (time()-$startime) . ';'. memory_get_usage() . "\n";
-
-?>
