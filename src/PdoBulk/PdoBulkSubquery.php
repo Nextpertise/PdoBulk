@@ -2,7 +2,7 @@
 
 namespace PdoBulk;
 
-class pdoBulkSubquery {
+class PdoBulkSubquery {
 	
 	private $query;
 	

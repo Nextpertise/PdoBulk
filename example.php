@@ -3,9 +3,10 @@
 namespace exampleApp;
 
 require 'src/PdoBulk/PdoBulk.php';
+require 'src/PdoBulk/PdoBulkSubquery.php';
 
-use PdoBulk\pdoBulk;
-use PdoBulk\pdoBulkSubquery;
+use PdoBulk\PdoBulk;
+use PdoBulk\PdoBulkSubquery;
 
 // configuration
 $dbhost 	= "localhost";
@@ -15,7 +16,7 @@ $dbpass		= "password";
 
 // database connection
 $conn = new \PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
-$pdoBulk = new pdoBulk($conn);		
+$pdoBulk = new PdoBulk($conn);		
 $startime = time();
 
 // Echo header
@@ -32,7 +33,7 @@ for($i = 0; $i < 1000; $i++) {
 	
 	// Add `Packageversion`
 	$packageversionEntry['packageid'] = 
-		new pdoBulkSubquery("(SELECT id FROM `Package` WHERE name = '" . $packageEntry['name'] . "' AND architecture = '" . $packageEntry['architecture'] . "')");
+		new PdoBulkSubquery("(SELECT id FROM `Package` WHERE name = '" . $packageEntry['name'] . "' AND architecture = '" . $packageEntry['architecture'] . "')");
 	$packageversionEntry['version'] = '1.13.4-3+deb7u2';
 	$pdoBulk->persist('Packageversion', $packageversionEntry);
 	

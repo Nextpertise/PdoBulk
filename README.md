@@ -12,7 +12,7 @@ The easiest way to install **PdoBulk** is to use [Composer](http://getcomposer.o
 Usage
 -----
 
-If you are using the autoloader in Composer (or your framework ties into it), then all you need to do is add a `use PdoBulk\pdoBulk;` statement at the top of each file you wish to use **PdoBulk** in and use it like a normal class:
+If you are using the autoloader in Composer (or your framework ties into it), then all you need to do is add a `use PdoBulk\PdoBulk;` statement at the top of each file you wish to use **PdoBulk** in and use it like a normal class:
 
 ```php
 <?php
@@ -20,8 +20,8 @@ namespace exampleApp;
 
 require 'src/PdoBulk/PdoBulk.php';
 
-use PdoBulk\pdoBulk;
-use PdoBulk\pdoBulkSubquery;
+use PdoBulk\PdoBulk;
+use PdoBulk\PdoBulkSubquery;
 
 // configuration
 $dbhost 	= "localhost";
@@ -31,7 +31,7 @@ $dbpass		= "password";
 
 // database connection
 $conn = new \PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
-$pdoBulk = new pdoBulk($conn);		
+$pdoBulk = new PdoBulk($conn);		
 ```
 
 **Add a two entries**

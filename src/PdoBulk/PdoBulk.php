@@ -2,7 +2,7 @@
 
 namespace PdoBulk;
 
-class pdoBulk {
+class PdoBulk {
 	
 	private $pdo = null;
 	private $queue = null;
