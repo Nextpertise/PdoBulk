@@ -101,6 +101,9 @@ class PdoBulk {
 		}
 	}
 	
+	/**
+	 * @param string $table
+	 */
 	public function getQueueLength($table) {
 		if(isset($this->queue[$table]) && $this->queue[$table] !== false) {
 			return count($this->queue[$table]);
