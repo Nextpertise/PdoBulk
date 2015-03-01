@@ -1,13 +1,14 @@
 PdoBulk - A PHP Pdo insert wrapper
 ==============================================
-[![Build Status](https://secure.travis-ci.org/nextpertise/pdobulk.png)](http://travis-ci.org/nextpertise/pdobulk)
+[![Build Status](https://travis-ci.org/Nextpertise/PdoBulk.svg?branch=master)](https://travis-ci.org/Nextpertise/PdoBulk)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Nextpertise/PdoBulk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Nextpertise/PdoBulk/?branch=master)
 
 Simple PHP helper class for working with bulk sets of data which needs to be imported in the database.
 
 Installing
 ----------
 
-The easiest way to install **PdoBulk** is to use [Composer](http://getcomposer.org/download/), the awesome dependency manager for PHP. Once Composer is installed, run `composer.phar require nextpertise/pdo-bulk` and composer will do all the hard work for you.
+The easiest way to install **PdoBulk** is to use [Composer](http://getcomposer.org/download/), the awesome dependency manager for PHP. Once Composer is installed, run `composer.phar require nextpertise/pdo-bulk:dev-master` and composer will do all the hard work for you.
 
 Usage
 -----
@@ -31,7 +32,13 @@ $dbpass		= "password";
 
 // database connection
 $conn = new \PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+<<<<<<< HEAD
 $pdoBulk = new PdoBulk($conn);		
+=======
+
+// pass pdo $conn to pdoBulk
+$pdoBulk = new pdoBulk($conn);		
+>>>>>>> 9733b6c289f6917d35f8d6325eb03fd8e9ad827c
 ```
 
 **Add a two entries**
