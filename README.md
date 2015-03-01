@@ -32,6 +32,8 @@ $dbpass		= "password";
 
 // database connection
 $conn = new \PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+
+// pass pdo $conn to pdoBulk
 $pdoBulk = new pdoBulk($conn);		
 ```
 
